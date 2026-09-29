@@ -1,0 +1,103 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='880' height='540' viewBox='0 0 880 540' font-family='Segoe UI, Arial, sans-serif'>
+<rect x='1' y='1' width='878' height='538' rx='16' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='2'/>
+<path d='M 1,46 L 1,17 Q 1,1 17,1 L 863,1 Q 879,1 879,17 L 879,46 Z' fill='#0F172A'/>
+<circle cx='24' cy='23' r='6' fill='#EF4444'/><circle cx='44' cy='23' r='6' fill='#F59E0B'/><circle cx='64' cy='23' r='6' fill='#10B981'/>
+<text x='90' y='29' font-size='15' fill='#FFFFFF' font-weight='700' text-anchor='start'>Calendário — tudo que vence por data</text>
+<text x='24' y='88' font-size='16' fill='#0F172A' font-weight='700' text-anchor='start'>‹   Junho 2026   ›</text>
+<circle cx='24' cy='64' r='11' fill='#EF4444'/><text x='24' y='68' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>1</text>
+<rect x='250' y='66' width='84' height='30' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='292' y='86' font-size='12' fill='#475569' font-weight='600' text-anchor='middle'>Hoje</text>
+<circle cx='452' cy='64' r='11' fill='#EF4444'/><text x='452' y='68' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>2</text>
+<circle cx='470' cy='82' r='6' fill='#2563EB'/>
+<text x='482' y='86' font-size='11' fill='#475569' font-weight='600' text-anchor='start'>Tarefas</text>
+<circle cx='570' cy='82' r='6' fill='#10B981'/>
+<text x='582' y='86' font-size='11' fill='#475569' font-weight='600' text-anchor='start'>Opps</text>
+<circle cx='670' cy='82' r='6' fill='#F59E0B'/>
+<text x='682' y='86' font-size='11' fill='#475569' font-weight='600' text-anchor='start'>Propostas</text>
+<circle cx='770' cy='82' r='6' fill='#3B82F6'/>
+<text x='782' y='86' font-size='11' fill='#475569' font-weight='600' text-anchor='start'>Contratos</text>
+<text x='34' y='104' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>Dom</text>
+<text x='156' y='104' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>Seg</text>
+<text x='278' y='104' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>Ter</text>
+<text x='400' y='104' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>Qua</text>
+<text x='522' y='104' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>Qui</text>
+<text x='644' y='104' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>Sex</text>
+<text x='766' y='104' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>Sáb</text>
+<circle cx='24' cy='110' r='11' fill='#EF4444'/><text x='24' y='114' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>3</text>
+<rect x='24' y='110' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='32' y='126' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>1</text>
+<rect x='146' y='110' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='154' y='126' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>2</text>
+<rect x='268' y='110' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='276' y='126' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>3</text>
+<rect x='390' y='110' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='398' y='126' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>4</text>
+<rect x='512' y='110' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='520' y='126' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>5</text>
+<rect x='634' y='110' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='642' y='126' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>6</text>
+<rect x='756' y='110' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='764' y='126' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>7</text>
+<rect x='24' y='182' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='32' y='198' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>8</text>
+<rect x='146' y='182' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='154' y='198' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>9</text>
+<rect x='268' y='182' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='276' y='198' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>10</text>
+<rect x='390' y='182' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='398' y='198' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>11</text>
+<rect x='512' y='182' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='520' y='198' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>12</text>
+<rect x='634' y='182' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='642' y='198' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>13</text>
+<rect x='756' y='182' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='764' y='198' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>14</text>
+<rect x='24' y='254' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='32' y='270' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>15</text>
+<rect x='146' y='254' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='154' y='270' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>16</text>
+<rect x='268' y='254' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='276' y='270' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>17</text>
+<rect x='390' y='254' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='398' y='270' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>18</text>
+<rect x='512' y='254' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='520' y='270' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>19</text>
+<rect x='634' y='254' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='642' y='270' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>20</text>
+<rect x='756' y='254' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='764' y='270' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>21</text>
+<rect x='24' y='326' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='32' y='342' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>22</text>
+<rect x='146' y='326' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='154' y='342' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>23</text>
+<rect x='268' y='326' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='276' y='342' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>24</text>
+<rect x='390' y='326' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='398' y='342' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>25</text>
+<rect x='512' y='326' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='520' y='342' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>26</text>
+<rect x='634' y='326' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='642' y='342' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>27</text>
+<rect x='756' y='326' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='764' y='342' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>28</text>
+<rect x='24' y='398' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='32' y='414' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>29</text>
+<rect x='146' y='398' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='154' y='414' font-size='11' fill='#94A3B8' font-weight='600' text-anchor='start'>30</text>
+<rect x='268' y='398' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='390' y='398' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='512' y='398' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='634' y='398' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='756' y='398' width='118' height='68' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='274' y='204' width='106' height='16' rx='4' fill='#EFF6FF' stroke='none' stroke-width='1'/>
+<text x='280' y='216' font-size='9' fill='#1E40AF' font-weight='600' text-anchor='start'>Reunião</text>
+<rect x='640' y='132' width='106' height='16' rx='4' fill='#ECFDF5' stroke='none' stroke-width='1'/>
+<text x='646' y='144' font-size='9' fill='#10B981' font-weight='600' text-anchor='start'>Fechamento</text>
+<rect x='152' y='348' width='106' height='16' rx='4' fill='#FEF3C7' stroke='none' stroke-width='1'/>
+<text x='158' y='360' font-size='9' fill='#B45309' font-weight='600' text-anchor='start'>Validade</text>
+<rect x='390' y='254' width='118' height='68' rx='6' fill='#EFF6FF' stroke='#2563EB' stroke-width='2'/>
+<circle cx='390' cy='254' r='11' fill='#EF4444'/><text x='390' y='258' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>4</text>
+<rect x='0' y='494' width='880' height='46' rx='0' fill='#F8FAFC' stroke='none' stroke-width='1'/>
+<line x1='0' y1='494' x2='880' y2='494' stroke='#E2E8F0' stroke-width='1'/>
+<text x='20' y='522' font-size='12' fill='#475569' font-weight='400' text-anchor='start'>① Navegue entre meses (Hoje volta ao mês atual)   ② Filtros por tipo   ③ Eventos coloridos por tipo   ④ Clique num dia para criar</text>
+</svg>

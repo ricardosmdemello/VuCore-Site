@@ -1,0 +1,54 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='880' height='540' viewBox='0 0 880 540' font-family='Segoe UI, Arial, sans-serif'>
+<rect x='1' y='1' width='878' height='538' rx='16' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='2'/>
+<path d='M 1,46 L 1,17 Q 1,1 17,1 L 863,1 Q 879,1 879,17 L 879,46 Z' fill='#0F172A'/>
+<circle cx='24' cy='23' r='6' fill='#EF4444'/><circle cx='44' cy='23' r='6' fill='#F59E0B'/><circle cx='64' cy='23' r='6' fill='#10B981'/>
+<text x='90' y='29' font-size='15' fill='#FFFFFF' font-weight='700' text-anchor='start'>Gerador de propostas — monte e gere o PDF</text>
+<rect x='24' y='64' width='180' height='410' rx='10' fill='#F8FAFC' stroke='#E2E8F0' stroke-width='1'/>
+<text x='40' y='90' font-size='13' fill='#0F172A' font-weight='700' text-anchor='start'>Seções</text>
+<circle cx='24' cy='64' r='11' fill='#EF4444'/><text x='24' y='68' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>1</text>
+<rect x='32' y='86' width='164' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='44' y='107' font-size='12' fill='#475569' font-weight='600' text-anchor='start'>⠿  Capa</text>
+<rect x='32' y='130' width='164' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='44' y='151' font-size='12' fill='#475569' font-weight='600' text-anchor='start'>⠿  Apresentação</text>
+<rect x='32' y='174' width='164' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='44' y='195' font-size='12' fill='#475569' font-weight='600' text-anchor='start'>⠿  Escopo</text>
+<rect x='32' y='218' width='164' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='44' y='239' font-size='12' fill='#475569' font-weight='600' text-anchor='start'>⠿  Itens &amp; preços</text>
+<rect x='32' y='262' width='164' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='44' y='283' font-size='12' fill='#475569' font-weight='600' text-anchor='start'>⠿  Condições</text>
+<rect x='32' y='306' width='164' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='44' y='327' font-size='12' fill='#475569' font-weight='600' text-anchor='start'>⠿  Assinatura</text>
+<rect x='224' y='64' width='420' height='410' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<circle cx='224' cy='64' r='11' fill='#EF4444'/><text x='224' y='68' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>2</text>
+<rect x='224' y='64' width='420' height='56' rx='6' fill='#2563EB' stroke='none' stroke-width='1'/>
+<text x='244' y='98' font-size='15' fill='#FFFFFF' font-weight='700' text-anchor='start'>PROPOSTA COMERCIAL</text>
+<text x='244' y='148' font-size='13' fill='#0F172A' font-weight='700' text-anchor='start'>Acme Indústria Ltda</text>
+<rect x='244' y='166' width='360' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='244' y='186' width='300' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='244' y='210' width='380' height='92' rx='6' fill='#F1F5F9' stroke='none' stroke-width='1'/>
+<text x='260' y='234' font-size='12' fill='#0F172A' font-weight='700' text-anchor='start'>Itens &amp; preços</text>
+<rect x='260' y='254' width='340' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='260' y='276' width='340' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<text x='244' y='338' font-size='14' fill='#10B981' font-weight='700' text-anchor='start'>Total: R$ 45.000</text>
+<rect x='244' y='366' width='360' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='244' y='388' width='240' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='664' y='64' width='192' height='410' rx='10' fill='#F8FAFC' stroke='#E2E8F0' stroke-width='1'/>
+<text x='680' y='90' font-size='13' fill='#0F172A' font-weight='700' text-anchor='start'>Blocos</text>
+<circle cx='664' cy='64' r='11' fill='#EF4444'/><text x='664' y='68' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>3</text>
+<rect x='672' y='86' width='176' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='686' y='107' font-size='12' fill='#2563EB' font-weight='600' text-anchor='start'>+ Texto</text>
+<rect x='672' y='130' width='176' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='686' y='151' font-size='12' fill='#2563EB' font-weight='600' text-anchor='start'>+ Tabela de itens</text>
+<rect x='672' y='174' width='176' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='686' y='195' font-size='12' fill='#2563EB' font-weight='600' text-anchor='start'>+ Imagem</text>
+<rect x='672' y='218' width='176' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='686' y='239' font-size='12' fill='#2563EB' font-weight='600' text-anchor='start'>+ Cláusula</text>
+<rect x='672' y='262' width='176' height='34' rx='6' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<text x='686' y='283' font-size='12' fill='#2563EB' font-weight='600' text-anchor='start'>+ Assinatura</text>
+<rect x='664' y='430' width='192' height='40' rx='8' fill='#2563EB' stroke='none' stroke-width='1'/>
+<text x='760' y='455' font-size='13' fill='#FFFFFF' font-weight='700' text-anchor='middle'>📄 Gerar PDF</text>
+<circle cx='664' cy='430' r='11' fill='#EF4444'/><text x='664' y='434' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>4</text>
+<rect x='0' y='494' width='880' height='46' rx='0' fill='#F8FAFC' stroke='none' stroke-width='1'/>
+<line x1='0' y1='494' x2='880' y2='494' stroke='#E2E8F0' stroke-width='1'/>
+<text x='20' y='522' font-size='12' fill='#475569' font-weight='400' text-anchor='start'>① Seções da proposta (reordene)   ② Pré-visualização em tempo real   ③ Arraste blocos para a página   ④ Gerar o PDF final</text>
+</svg>

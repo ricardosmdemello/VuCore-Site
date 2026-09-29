@@ -1,0 +1,64 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='880' height='540' viewBox='0 0 880 540' font-family='Segoe UI, Arial, sans-serif'>
+<rect x='1' y='1' width='878' height='538' rx='16' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='2'/>
+<path d='M 1,46 L 1,17 Q 1,1 17,1 L 863,1 Q 879,1 879,17 L 879,46 Z' fill='#0F172A'/>
+<circle cx='24' cy='23' r='6' fill='#EF4444'/><circle cx='44' cy='23' r='6' fill='#F59E0B'/><circle cx='64' cy='23' r='6' fill='#10B981'/>
+<text x='90' y='29' font-size='15' fill='#FFFFFF' font-weight='700' text-anchor='start'>Meu Dia — seu painel do dia</text>
+<text x='24' y='88' font-size='18' fill='#0F172A' font-weight='700' text-anchor='start'>☀️ Meu Dia</text>
+<text x='150' y='88' font-size='13' fill='#94A3B8' font-weight='400' text-anchor='start'>— terça-feira, 10/06</text>
+<circle cx='24' cy='104' r='11' fill='#EF4444'/><text x='24' y='108' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>1</text>
+<rect x='24' y='104' width='200' height='70' rx='10' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='24' y='104' width='5' height='70' rx='3' fill='#2563EB' stroke='none' stroke-width='1'/>
+<text x='42' y='130' font-size='12' fill='#94A3B8' font-weight='600' text-anchor='start'>Hoje</text>
+<text x='42' y='160' font-size='20' fill='#0F172A' font-weight='700' text-anchor='start'>6</text>
+<rect x='236' y='104' width='200' height='70' rx='10' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='236' y='104' width='5' height='70' rx='3' fill='#2563EB' stroke='none' stroke-width='1'/>
+<text x='254' y='130' font-size='12' fill='#94A3B8' font-weight='600' text-anchor='start'>Atrasadas</text>
+<text x='254' y='160' font-size='20' fill='#0F172A' font-weight='700' text-anchor='start'>2</text>
+<rect x='448' y='104' width='200' height='70' rx='10' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='448' y='104' width='5' height='70' rx='3' fill='#2563EB' stroke='none' stroke-width='1'/>
+<text x='466' y='130' font-size='12' fill='#94A3B8' font-weight='600' text-anchor='start'>Opps abertas</text>
+<text x='466' y='160' font-size='20' fill='#0F172A' font-weight='700' text-anchor='start'>9</text>
+<rect x='660' y='104' width='200' height='70' rx='10' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='660' y='104' width='5' height='70' rx='3' fill='#2563EB' stroke='none' stroke-width='1'/>
+<text x='678' y='130' font-size='12' fill='#94A3B8' font-weight='600' text-anchor='start'>Pipeline</text>
+<text x='678' y='160' font-size='20' fill='#0F172A' font-weight='700' text-anchor='start'>R$ 240k</text>
+<rect x='24' y='196' width='270' height='282' rx='10' fill='#F8FAFC' stroke='#E2E8F0' stroke-width='1'/>
+<text x='40' y='222' font-size='13' fill='#0F172A' font-weight='700' text-anchor='start'>✅ Atividades de hoje</text>
+<circle cx='24' cy='196' r='11' fill='#EF4444'/><text x='24' y='200' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>2</text>
+<rect x='36' y='240' width='246' height='60' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='48' y='256' width='200' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='48' y='276' width='160' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='36' y='312' width='246' height='60' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='48' y='328' width='200' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='48' y='348' width='160' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='36' y='384' width='246' height='60' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='48' y='400' width='200' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='48' y='420' width='160' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='307' y='196' width='270' height='282' rx='10' fill='#F8FAFC' stroke='#E2E8F0' stroke-width='1'/>
+<text x='323' y='222' font-size='13' fill='#0F172A' font-weight='700' text-anchor='start'>🔥 Leads quentes</text>
+<circle cx='307' cy='196' r='11' fill='#EF4444'/><text x='307' y='200' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>3</text>
+<rect x='319' y='240' width='246' height='60' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='331' y='256' width='200' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='331' y='276' width='160' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='319' y='312' width='246' height='60' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='331' y='328' width='200' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='331' y='348' width='160' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='319' y='384' width='246' height='60' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='331' y='400' width='200' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='331' y='420' width='160' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='590' y='196' width='270' height='282' rx='10' fill='#F8FAFC' stroke='#E2E8F0' stroke-width='1'/>
+<text x='606' y='222' font-size='13' fill='#0F172A' font-weight='700' text-anchor='start'>⏰ Oportunidades urgentes</text>
+<circle cx='590' cy='196' r='11' fill='#EF4444'/><text x='590' y='200' font-size='12' fill='#fff' font-weight='700' text-anchor='middle'>4</text>
+<rect x='602' y='240' width='246' height='60' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='614' y='256' width='200' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='614' y='276' width='160' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='602' y='312' width='246' height='60' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='614' y='328' width='200' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='614' y='348' width='160' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='602' y='384' width='246' height='60' rx='8' fill='#FFFFFF' stroke='#E2E8F0' stroke-width='1'/>
+<rect x='614' y='400' width='200' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='614' y='420' width='160' height='10' rx='5' fill='#E2E8F0' stroke='none' stroke-width='1'/>
+<rect x='0' y='494' width='880' height='46' rx='0' fill='#F8FAFC' stroke='none' stroke-width='1'/>
+<line x1='0' y1='494' x2='880' y2='494' stroke='#E2E8F0' stroke-width='1'/>
+<text x='20' y='522' font-size='12' fill='#475569' font-weight='400' text-anchor='start'>① KPIs pessoais   ② Atividades de hoje (conclua sem sair da tela)   ③ Leads quentes que podem esfriar   ④ Oportunidades fechando em 7 dias</text>
+</svg>

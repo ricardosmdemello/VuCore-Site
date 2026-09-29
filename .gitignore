@@ -1,0 +1,8 @@
+node_modules
+dist
+dist-ssr
+.vs
+server/data/*.json
+server/downloads/*
+!server/downloads/LEIA-ME.txt
+.env

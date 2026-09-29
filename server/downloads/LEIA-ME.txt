@@ -1,0 +1,4 @@
+Coloque aqui os instaladores. O nome do arquivo deve ser igual ao campo
+`download.file` de cada produto em src/data/products.js.
+Cada acesso a /download/<slug> incrementa o contador em server/data/downloads.json.
+Estatísticas: /api/stats?token=<STATS_TOKEN>
