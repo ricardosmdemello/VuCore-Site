@@ -12,7 +12,7 @@ export default function Layout({ children }) {
       <header className="header">
         <div className="container header-inner">
           <Link to="/" className="brand" onClick={close}>
-            <span className="brand-mark" aria-hidden="true">V</span>
+            <span className="brand-mark" aria-hidden="true">Vu</span>
             {siteConfig.siteName}
           </Link>
           <button className="menu-btn" aria-label="Abrir menu" aria-expanded={open} onClick={() => setOpen(!open)}>☰</button>

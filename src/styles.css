@@ -19,7 +19,7 @@ body {
   font: 16px/1.65 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }
 a { color: var(--primary-2); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a, a:hover { text-decoration: none; }
 img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3 { line-height: 1.2; margin: 0 0 .6em; }
 h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
@@ -109,6 +109,11 @@ h3 { font-size: 1.1rem; }
 .cta { text-align: center; }
 
 .dl-list { display: flex; flex-direction: column; gap: 10px; }
+.dl-row { position: relative; transition: border-color .2s; }
+.dl-row:hover { border-color: var(--accent); }
+.dl-row .download-wrap { position: relative; z-index: 1; }
+.stretched::after { content: ''; position: absolute; inset: 0; border-radius: inherit; }
+.card, .dl-row { cursor: pointer; }
 .dl-row { display: flex; align-items: center; gap: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; flex-wrap: wrap; }
 .dl-info { flex: 1; display: flex; flex-direction: column; min-width: 180px; }
 

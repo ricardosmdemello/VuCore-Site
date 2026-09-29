@@ -120,9 +120,12 @@ export default function Product() {
           <ul className="checks">{p.requirements.map((r) => <li key={r}>{r}</li>)}</ul>
         </div>
         <div>
-          <h2>Tecnologia</h2>
-          <ul className="tags">{p.stack.map((s) => <li key={s}>{s}</li>)}</ul>
-          {p.license && <p className="muted">Licença: {p.license}</p>}
+          {p.license && (
+            <>
+              <h2>Licença</h2>
+              <p className="muted">{p.license}</p>
+            </>
+          )}
         </div>
       </section>
 

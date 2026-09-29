@@ -8,10 +8,10 @@
  * A chave de cada produto é o `slug` definido em src/data/products.js.
  */
 const siteConfig = {
-  siteName: 'VuCore Software',
+  siteName: 'VuCore Platform',
   siteUrl: 'https://www.vucore.com.br',
-  author: 'Ricardo Silveira Martins de Mello',
-  contactEmail: 'ricardo@plurio.com.br',
+  author: 'VuCore Platform',
+  contactEmail: 'vucoreplatform@gmail.com',
   defaultLocale: 'pt_BR',
 
   pages: {

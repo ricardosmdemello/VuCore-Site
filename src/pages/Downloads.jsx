@@ -10,7 +10,7 @@ const Table = ({ items }) => (
       <div className="dl-row" key={p.slug} style={{ '--accent': p.color }}>
         <span className="card-icon" aria-hidden="true">{p.icon}</span>
         <div className="dl-info">
-          <Link to={`/produtos/${p.slug}`}><strong>{p.name}</strong></Link>
+          <Link className="stretched" to={`/produtos/${p.slug}`}><strong>{p.name}</strong></Link>
           <span className="muted small">{p.download?.label} · {p.requirements[0]}</span>
         </div>
         <DownloadButton product={p} className="btn btn-primary btn-sm" />
