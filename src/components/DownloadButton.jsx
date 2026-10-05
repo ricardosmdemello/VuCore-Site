@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Icon from './Icon.jsx';
 
 /** Link para /download/:slug — o servidor incrementa o contador e entrega o arquivo. */
 export default function DownloadButton({ product, showCount = true, className = 'btn btn-primary' }) {
@@ -14,12 +15,19 @@ export default function DownloadButton({ product, showCount = true, className = 
   }, [product.slug]);
 
   if (!product.download?.file) return null;
+  const label = product.pricing === 'paid' ? 'Baixar avaliação' : 'Baixar grátis';
   return (
     <span className="download-wrap">
-      <a href={`/download/${product.slug}`} className={className} rel="nofollow" onClick={() => setTimeout(refresh, 1500)}>
-        ⬇ {product.pricing === 'paid' ? 'Baixar avaliação' : 'Baixar grátis'}
+      <a
+        href={`/download/${product.slug}`}
+        className={className}
+        rel="nofollow"
+        aria-label={`${label}: ${product.name}`}
+        onClick={() => setTimeout(refresh, 1500)}
+      >
+        <Icon name="download" size={18} /> {label}
       </a>
-      {showCount && count !== null && <small className="muted">{count.toLocaleString('pt-BR')} downloads</small>}
+      {showCount && count > 0 && <small className="muted">{count.toLocaleString('pt-BR')} downloads</small>}
     </span>
   );
 }
