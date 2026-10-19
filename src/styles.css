@@ -233,3 +233,15 @@ main:focus { outline: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* scrollspy do submenu */
+.subnav a.active { color: var(--text); background: color-mix(in srgb, var(--accent) 16%, transparent); }
+
+/* como funciona */
+.steps { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; counter-reset: step; }
+.steps li { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.steps p { margin: 0; font-size: .95rem; }
+.step-n { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; margin-bottom: 14px; font-weight: 800; color: #fff; background: linear-gradient(135deg, var(--primary), var(--primary-2)); }
+
+/* conteúdo abaixo da dobra só é renderizado quando se aproxima da tela (melhora INP/LCP) */
+.section + .section { content-visibility: auto; contain-intrinsic-size: auto 600px; }

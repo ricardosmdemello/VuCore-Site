@@ -12,7 +12,9 @@ const principles = [
 export default function About() {
   return (
     <section className="section container narrow">
-      <Seo title="Sobre" description={`Conheça a ${siteConfig.siteName}: software desktop brasileiro, rápido, privado e com IA local.`} path="/sobre" />
+      <Seo title="Sobre" description={`Conheça a ${siteConfig.siteName}: software desktop brasileiro, rápido, privado e com IA local.`} path="/sobre"
+        jsonLd={{ '@context': 'https://schema.org', '@type': 'AboutPage', url: siteConfig.siteUrl + '/sobre', about: { '@id': siteConfig.siteUrl + '/#organization' }, isPartOf: { '@id': siteConfig.siteUrl + '/#website' } }}
+      />
       <header className="page-head">
         <p className="kicker">Sobre</p>
         <h1>Sobre a {siteConfig.siteName}</h1>

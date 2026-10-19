@@ -13,6 +13,12 @@ const siteConfig = {
   author: 'VuCore Platform',
   contactEmail: 'vucoreplatform@gmail.com',
   defaultLocale: 'pt_BR',
+  /** Perfis oficiais (GitHub, LinkedIn, YouTube…) — reforçam a entidade no Google (Knowledge Graph). */
+  sameAs: [],
+  /** Verificação dos buscadores: cole aqui os códigos do Google Search Console e Bing Webmaster Tools. */
+  verification: { google: '', bing: '' },
+  /** Chave IndexNow (Bing, Yandex, Seznam…): string hex de 8–128 caracteres. Vazio = desativado. */
+  indexNowKey: '',
 
   pages: {
     // Gratuitos

@@ -20,6 +20,7 @@ export default function Layout({ children }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const close = () => setOpen(false);
+  const { pathname } = useLocation();
   useScrollManager();
 
   useEffect(() => {
@@ -48,7 +49,7 @@ export default function Layout({ children }) {
           </button>
           <nav id="menu" className={`nav ${open ? 'open' : ''}`} aria-label="Principal">
             <NavLink to="/" end onClick={close}>Início</NavLink>
-            <Link to={{ pathname: '/', hash: '#produtos' }} onClick={close}>Produtos</Link>
+            <Link to={{ pathname: '/', hash: '#produtos' }} className={pathname.startsWith('/produtos') ? 'active' : undefined} onClick={close}>Produtos</Link>
             {isVisible('sobre') && <NavLink to="/sobre" onClick={close}>Sobre</NavLink>}
             {isVisible('downloads') && (
               <NavLink to="/downloads" className="btn btn-primary btn-sm nav-cta" onClick={close}>
@@ -63,7 +64,7 @@ export default function Layout({ children }) {
         <div className="container footer-grid">
           <div>
             <Link to="/" className="brand"><span className="brand-mark" aria-hidden="true">Vu</span>{siteConfig.siteName}</Link>
-            <p className="muted footer-about">Software desktop para desenvolvedores, estudantes e empresas. Rápido, privado e feito no Brasil.</p>
+            <p className="muted footer-about">Software desktop para desenvolvedores, estudantes e empresas. Rápido e privado.</p>
             <a className="footer-mail" href={`mailto:${siteConfig.contactEmail}`}><Icon name="mail" size={16} /> {siteConfig.contactEmail}</a>
           </div>
           <div>
@@ -85,7 +86,6 @@ export default function Layout({ children }) {
         </div>
         <div className="container copy muted">
           <span>© {new Date().getFullYear()} {siteConfig.author}. Todos os direitos reservados.</span>
-          <span>Feito no Brasil</span>
         </div>
       </footer>
     </>

@@ -6,6 +6,7 @@
  *  - GET  /api/stats?token=XXX   -> todos os contadores + histórico (protegido por STATS_TOKEN)
  */
 import express from 'express';
+import compression from 'compression';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -41,6 +42,17 @@ const save = () => {
 const app = express();
 app.disable('x-powered-by');
 app.set('trust proxy', true);
+app.use(compression());
+app.use((req, res, next) => {
+  res.set({
+    'X-Content-Type-Options': 'nosniff',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'X-Frame-Options': 'SAMEORIGIN',
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+  });
+  if (req.secure) res.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  next();
+});
 
 app.get('/download/:slug', (req, res) => {
   const product = products.find((p) => p.slug === req.params.slug);
@@ -76,10 +88,16 @@ app.use((req, res, next) => {
   const clean = req.path.replace(/\/+$/, '');
   if (clean && req.path !== clean) return res.redirect(301, clean);
   const page = path.join(DIST, clean, 'index.html');
-  if (page.startsWith(DIST) && fs.existsSync(page)) return res.sendFile(page);
+  if (page.startsWith(DIST) && fs.existsSync(page)) return res.set('Cache-Control', 'public, max-age=0, must-revalidate').sendFile(page);
   next();
 });
-app.use(express.static(DIST, { redirect: false, index: false, maxAge: '1h' }));
+// Arquivos com hash (Vite) são imutáveis; imagens por 7 dias; HTML sempre revalidado
+app.use('/assets', express.static(path.join(DIST, 'assets'), { immutable: true, maxAge: '1y', index: false }));
+app.use(express.static(DIST, {
+  redirect: false,
+  index: false,
+  setHeaders: (res, file) => res.set('Cache-Control', /\.(png|webp|svg|jpg|ico|woff2?)$/.test(file) ? 'public, max-age=604800' : 'public, max-age=0, must-revalidate'),
+}));
 app.use((req, res) => {
   const nf = path.join(DIST, '404.html');
   res.status(404);

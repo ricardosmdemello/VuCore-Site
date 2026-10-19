@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import Seo from '../components/Seo.jsx';
+import Seo, { clip } from '../components/Seo.jsx';
+import Picture from '../components/Picture.jsx';
+import ProductCard from '../components/ProductCard.jsx';
 import Icon from '../components/Icon.jsx';
 import ProductIcon from '../components/ProductIcon.jsx';
 import DownloadButton from '../components/DownloadButton.jsx';
 import NotFound from './NotFound.jsx';
-import { findProduct } from '../data/products.js';
+import { findProduct, visibleProducts } from '../data/products.js';
 import siteConfig from '../config/site.config.js';
 
 /** Visualizador de telas em tela cheia; Esc fecha, setas navegam. */
@@ -28,7 +30,7 @@ function Lightbox({ shots, index, onClose, onMove }) {
   return (
     <div className="lightbox" role="dialog" aria-modal="true" aria-label={s.name} onClick={onClose}>
       <figure onClick={(e) => e.stopPropagation()}>
-        <img src={s.image} alt={s.name} />
+        <Picture src={s.image} alt={s.name} />
         <figcaption><strong>{s.name}</strong> <span className="muted">{s.text}</span></figcaption>
       </figure>
       <button className="lb-close" aria-label="Fechar" autoFocus onClick={onClose}><Icon name="close" size={22} /></button>
@@ -42,11 +44,35 @@ function Lightbox({ shots, index, onClose, onMove }) {
   );
 }
 
+/** Destaca no submenu a seção visível (scrollspy). */
+function useActiveSection(ids) {
+  const [active, setActive] = useState(ids[0]);
+  const key = ids.join();
+  useEffect(() => {
+    const io = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
+      { rootMargin: '-35% 0px -60% 0px' }
+    );
+    ids.forEach((id) => { const el = document.getElementById(id); if (el) io.observe(el); });
+    return () => io.disconnect();
+  }, [key]);
+  return active;
+}
+
 export default function Product() {
   const { slug } = useParams();
   const p = findProduct(slug);
   const [shot, setShot] = useState(null);
+  const sections = p ? [
+    ['visao-geral', 'Visão geral'],
+    ['funcionalidades', 'Funcionalidades'],
+    ['telas', 'Telas'],
+    ['requisitos', 'Requisitos'],
+    ...(p.faq?.length ? [['faq', 'Perguntas']] : []),
+  ] : [];
+  const active = useActiveSection(sections.map(([id]) => id));
   if (!p) return <NotFound />;
+  const related = [...visibleProducts(p.pricing), ...visibleProducts(p.pricing === 'free' ? 'paid' : 'free')].filter((x) => x.slug !== p.slug).slice(0, 3);
 
   const path = `/produtos/${p.slug}`;
   const url = siteConfig.siteUrl + path;
@@ -62,18 +88,23 @@ export default function Product() {
         applicationCategory: p.category,
         operatingSystem: p.requirements[0],
         url,
-        image: siteConfig.siteUrl + (p.heroImage || '/favicon.png'),
+        image: siteConfig.siteUrl + `/og/${p.slug}.png`,
+        ...(shots.length ? { screenshot: shots.map((s) => siteConfig.siteUrl + s.image) } : {}),
         downloadUrl: p.download?.file ? `${siteConfig.siteUrl}/download/${p.slug}` : undefined,
         featureList: p.features.map((x) => x.title).join(', '),
         inLanguage: 'pt-BR',
-        author: { '@type': 'Person', name: siteConfig.author },
-        ...(p.pricing === 'free' ? { offers: { '@type': 'Offer', price: '0', priceCurrency: 'BRL' } } : {}),
+        author: { '@id': siteConfig.siteUrl + '/#organization' },
+        publisher: { '@id': siteConfig.siteUrl + '/#organization' },
+        isAccessibleForFree: p.pricing === 'free',
+        ...(p.license ? { license: p.license } : {}),
+        ...(p.pricing === 'free' ? { offers: { '@type': 'Offer', price: '0', priceCurrency: 'BRL', availability: 'https://schema.org/InStock' } } : {}),
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Início', item: siteConfig.siteUrl + '/' },
-          { '@type': 'ListItem', position: 2, name: p.name, item: url },
+          { '@type': 'ListItem', position: 2, name: 'Produtos', item: siteConfig.siteUrl + '/#produtos' },
+          { '@type': 'ListItem', position: 3, name: p.name, item: url },
         ],
       },
       ...(p.faq?.length
@@ -82,22 +113,15 @@ export default function Product() {
     ],
   };
 
-  const sections = [
-    ['visao-geral', 'Visão geral'],
-    ['funcionalidades', 'Funcionalidades'],
-    ['telas', 'Telas'],
-    ['requisitos', 'Requisitos'],
-    ...(p.faq?.length ? [['faq', 'Perguntas']] : []),
-  ];
-
   return (
     <article style={{ '--accent': p.color }}>
       <Seo
-        title={`${p.name}: ${p.tagline}`.slice(0, 65)}
-        description={p.description[0].slice(0, 158)}
+        title={clip(`${p.name}: ${p.tagline}`, 62)}
+        description={p.description[0]}
         keywords={p.keywords}
         path={path}
-        image={p.heroImage}
+        image={`/og/${p.slug}.png`}
+        imageAlt={`${p.name}: ${p.tagline}`}
         jsonLd={jsonLd}
       />
       <section className="hero product-hero">
@@ -137,7 +161,7 @@ export default function Product() {
           {p.heroImage && (
             <div className="window">
               <div className="window-bar" aria-hidden="true"><i /><i /><i /><span>{p.name}</span></div>
-              <img src={p.heroImage} alt={`Tela do ${p.name}`} width="960" height="540" fetchpriority="high" />
+              <Picture src={p.heroImage} alt={`Tela principal do ${p.name}`} width="960" height="540" fetchpriority="high" />
             </div>
           )}
         </div>
@@ -145,7 +169,7 @@ export default function Product() {
 
       <nav className="subnav" aria-label="Seções da página">
         <div className="container subnav-inner">
-          {sections.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
+          {sections.map(([id, label]) => <a key={id} href={`#${id}`} className={active === id ? 'active' : undefined} aria-current={active === id ? 'location' : undefined}>{label}</a>)}
           <span className="subnav-cta"><DownloadButton product={p} showCount={false} className="btn btn-primary btn-sm" /></span>
         </div>
       </nav>
@@ -186,7 +210,7 @@ export default function Product() {
             <figure className="screen" key={s.name}>
               {s.image ? (
                 <button className="screen-btn" onClick={() => setShot(shots.indexOf(s))} aria-label={`Ampliar: ${s.name}`}>
-                  <img src={s.image} alt={`${p.name}: ${s.name}`} loading="lazy" width="800" height="450" />
+                  <Picture src={s.image} alt={`${p.name}: ${s.name} — ${s.text}`} loading="lazy" width="800" height="450" />
                 </button>
               ) : (
                 <div className="screen-ph" aria-hidden="true">
@@ -235,6 +259,16 @@ export default function Product() {
           </div>
         </div>
       </section>
+
+      {related.length > 0 && (
+        <section className="section container" aria-labelledby="relacionados">
+          <header className="section-head">
+            <p className="kicker">Veja também</p>
+            <h2 id="relacionados">Outros produtos VuCore</h2>
+          </header>
+          <div className="grid">{related.map((x) => <ProductCard key={x.slug} product={x} />)}</div>
+        </section>
+      )}
 
       {shot !== null && (
         <Lightbox

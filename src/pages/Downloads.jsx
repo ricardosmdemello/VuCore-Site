@@ -4,6 +4,7 @@ import Seo from '../components/Seo.jsx';
 import DownloadButton from '../components/DownloadButton.jsx';
 import ProductIcon from '../components/ProductIcon.jsx';
 import { visibleProducts } from '../data/products.js';
+import siteConfig from '../config/site.config.js';
 
 const Table = ({ items }) => (
   <div className="dl-list">
@@ -28,6 +29,17 @@ export default function Downloads() {
         description="Baixe grátis o Portugol Studio .NET, VuCore Explorer, VuCore Inspector, VuCore Desktop Merge, VuCore Digest e versões de avaliação dos produtos profissionais VuCore."
         path="/downloads"
         keywords="download, baixar grátis, portugol studio download, vucore download"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Downloads VuCore',
+          url: siteConfig.siteUrl + '/downloads',
+          isPartOf: { '@id': siteConfig.siteUrl + '/#website' },
+          mainEntity: {
+            '@type': 'ItemList',
+            itemListElement: visibleProducts().map((p, i) => ({ '@type': 'ListItem', position: i + 1, name: p.name, url: `${siteConfig.siteUrl}/produtos/${p.slug}` })),
+          },
+        }}
       />
       <header className="page-head">
         <p className="kicker">Downloads</p>

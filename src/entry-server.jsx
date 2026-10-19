@@ -6,6 +6,7 @@ import App from './App.jsx';
 
 export { routes } from './routes.js';
 export { default as siteConfig } from './config/site.config.js';
+export { products } from './data/products.js';
 
 export function render(url) {
   const helmetContext = {};

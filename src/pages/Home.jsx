@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Seo from '../components/Seo.jsx';
 import Icon from '../components/Icon.jsx';
 import ProductCard from '../components/ProductCard.jsx';
+import Picture from '../components/Picture.jsx';
 import { visibleProducts } from '../data/products.js';
 import siteConfig, { isVisible } from '../config/site.config.js';
 
@@ -12,6 +13,20 @@ const pillars = [
   { icon: 'globe', title: 'Em português', text: 'Interfaces, documentação e suporte em português do Brasil.' },
 ];
 
+const steps = [
+  { title: 'Escolha a ferramenta', text: 'Veja telas, funcionalidades e requisitos de cada produto antes de baixar.' },
+  { title: 'Baixe e instale', text: 'Pacotes para Windows x64, sem cadastro e sem instaladores de terceiros.' },
+  { title: 'Use offline', text: 'Tudo roda no seu computador. Seus arquivos e dados nunca saem dele.' },
+];
+
+const faq = [
+  { q: 'Os produtos VuCore são gratuitos?', a: 'Portugol Studio .NET, VuCore Explorer, VuCore Inspector, VuCore Desktop Merge e VuCore Digest são gratuitos. Os produtos profissionais têm versão de avaliação e licença comercial sob consulta.' },
+  { q: 'Preciso criar conta para baixar?', a: 'Não. Os downloads são diretos, sem cadastro e sem e-mail obrigatório.' },
+  { q: 'Meus dados são enviados para a nuvem?', a: 'Não. Os recursos de inteligência artificial e de indexação rodam 100% no seu computador.' },
+  { q: 'Quais sistemas operacionais são suportados?', a: 'Windows 10 e Windows 11 (x64). Alguns produtos também têm pacote para ARM64.' },
+  { q: 'Como compro uma licença para minha empresa?', a: `Envie um e-mail para ${siteConfig.contactEmail} com o produto e a quantidade de usuários. Respondemos com proposta e condições.` },
+];
+
 export default function Home() {
   const free = visibleProducts('free');
   const paid = visibleProducts('paid');
@@ -19,8 +34,19 @@ export default function Home() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'Organization', name: siteConfig.siteName, url: siteConfig.siteUrl, logo: siteConfig.siteUrl + '/favicon.png', email: siteConfig.contactEmail },
-      { '@type': 'WebSite', name: siteConfig.siteName, url: siteConfig.siteUrl, inLanguage: 'pt-BR' },
+      {
+        '@type': 'Organization',
+        '@id': siteConfig.siteUrl + '/#organization',
+        name: siteConfig.siteName,
+        url: siteConfig.siteUrl,
+        logo: siteConfig.siteUrl + '/favicon.png',
+        email: siteConfig.contactEmail,
+        areaServed: 'BR',
+        contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: siteConfig.contactEmail, availableLanguage: ['Portuguese'] },
+        ...(siteConfig.sameAs?.length ? { sameAs: siteConfig.sameAs } : {}),
+      },
+      { '@type': 'WebSite', '@id': siteConfig.siteUrl + '/#website', name: siteConfig.siteName, url: siteConfig.siteUrl, inLanguage: 'pt-BR', publisher: { '@id': siteConfig.siteUrl + '/#organization' } },
+      { '@type': 'FAQPage', mainEntity: faq.map((x) => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) },
       {
         '@type': 'ItemList',
         itemListElement: visibleProducts().map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${siteConfig.siteUrl}/produtos/${p.slug}`, name: p.name })),
@@ -31,7 +57,7 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Software para Windows: desenvolvimento, segurança, educação e vendas"
+        title="Software para Windows grátis, rápido e com IA local"
         description="Baixe o Portugol Studio .NET, VuCore Explorer, VuCore Inspector, VuCore Desktop Merge, VuCore Digest e conheça o VuCore Desktop CRM, DB Designer e Chess vs LLM. Software rápido, privado e com IA local."
         keywords="software windows, ferramentas para desenvolvedores, portugol studio, explorador de arquivos, decompilador, crm offline, download grátis"
         jsonLd={jsonLd}
@@ -39,7 +65,6 @@ export default function Home() {
       <section className="hero">
         <div className="container hero-split">
           <div>
-            <p className="pill"><span className="dot" aria-hidden="true" /> Feito no Brasil · IA 100% local</p>
             <h1>Software que trabalha para você, <span className="grad">não para a nuvem.</span></h1>
             <p className="lead">
               Ferramentas desktop rápidas e privadas para quem programa, estuda, analisa e vende. Tudo roda no seu
@@ -59,7 +84,7 @@ export default function Home() {
             <Link to={`/produtos/${showcase.slug}`} className="showcase" aria-label={`Ver ${showcase.name}`}>
               <div className="window">
                 <div className="window-bar" aria-hidden="true"><i /><i /><i /><span>{showcase.name}</span></div>
-                <img src={showcase.heroImage} alt={`Tela do ${showcase.name}`} width="960" height="540" fetchpriority="high" />
+                <Picture src={showcase.heroImage} alt={`Tela principal do ${showcase.name}`} width="960" height="540" fetchpriority="high" />
               </div>
             </Link>
           )}
@@ -103,6 +128,32 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="section container" aria-labelledby="como-funciona">
+        <header className="section-head">
+          <p className="kicker">Como funciona</p>
+          <h2 id="como-funciona">Do download ao uso em minutos</h2>
+        </header>
+        <ol className="steps">
+          {steps.map((x, i) => (
+            <li key={x.title}>
+              <span className="step-n" aria-hidden="true">{i + 1}</span>
+              <h3>{x.title}</h3>
+              <p className="muted">{x.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="section container narrow" aria-labelledby="perguntas">
+        <header className="section-head">
+          <p className="kicker">Perguntas frequentes</p>
+          <h2 id="perguntas">Dúvidas comuns</h2>
+        </header>
+        {faq.map((x) => (
+          <details key={x.q} className="faq"><summary>{x.q}</summary><p>{x.a}</p></details>
+        ))}
       </section>
 
       <section className="section container">

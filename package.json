@@ -5,11 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently -k \"vite\" \"node server/index.js\"",
-    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.js",
+    "build": "node scripts/images.js && vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.js",
     "start": "node server/index.js",
-    "preview": "npm run build && npm start"
+    "preview": "npm run build && npm start",
+    "images": "node scripts/images.js",
+    "indexnow": "node scripts/indexnow.js"
   },
   "dependencies": {
+    "compression": "^1.8.2",
     "express": "^4.21.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -19,6 +22,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "concurrently": "^9.1.0",
+    "sharp": "^0.35.5",
     "vite": "^5.4.11"
   }
 }
